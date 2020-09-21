@@ -1,0 +1,22 @@
+Dados para preenchimento de atendimento.
+
+Caso simples, de acordo com os arquivos.
+
+Sem erros
+
+Preencher Caso com os sequintes dados.
+
+Numero Caso 001-MPF-000001-18
+
+Banco: 888 - BANCO EXEMPLO
+
+Periodo de Afastamento: 01/01/2006 a 31/12/2006
+
+
+Inserir dois Investigados com os seguintes CPFs: 
+
+76527514700 (INVESTIGADO 700) e 20050506870 (INVESTIGADO 200)
+
+OBS: Os demais dados podem ser sugeridos pelo usuário.
+
+

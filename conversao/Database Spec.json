@@ -1,0 +1,842 @@
+{
+    "xsd": "https://ibm.com/daas/module/1.0/module.xsd",
+    "source": {
+        "id": "StringID",
+        "jdbc": {
+            "jdbcUrl": "jdbc:sqlserver://vottdts16:1433;DATABASE=AdventureWorks",
+            "driverClassName": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+            "connectionProperties": "OPTIONAL=TRUE;LOGINTIMEOUT=0",
+            "catalog": "AdventureWorks",
+            "schema": "Person"
+        },
+        "user": "user_name",
+        "password": "password"
+    },
+    "table": {
+        "name": "TableName",
+        "description": "description of the table for visual hints ",
+        "column": [
+            {
+                "name": "AddressID",
+                "description": "String",
+                "datatype": "INTEGER",
+                "nullable": false,
+                "label": "Address Id",
+                "usage": "identifier",
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cNone"
+            }, {
+                "name": "AddressLine1",
+                "description": "String",
+                "datatype": "NVARCHAR(60)",
+                "nullable": false,
+                "label": "Address Line 1",
+                "usage": "attribute",
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cStreetAddress"
+            }, {
+                "name": "AddressLine2",
+                "datatype": "NVARCHAR(60)",
+                "nullable": true,
+                "label": "Address Line 2",
+                "usage": "attribute",
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cStreetAddress"
+            }, {
+                "name": "City",
+                "datatype": "NVARCHAR(30)",
+                "nullable": false,
+                "label": "City",
+                "usage": "identifier",
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cCity"
+            }, {
+                "name": "StateProvinceID",
+                "datatype": "INTEGER",
+                "nullable": false,
+                "label": "State Province Id",
+                "usage": "identifier",
+                "regularAggregate": "countDistinct"
+            }, {
+                "name": "PostalCode",
+                "datatype": "NVARCHAR(15)",
+                "nullable": false,
+                "label": "Postal Code",
+                "usage": "identifier",
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cPostalCode"
+            }, {
+                "name": "rowguid",
+                "datatype": "CHAR(36)",
+                "nullable": false,
+                "label": "Rowguid",
+                "usage": "identifier",
+                "regularAggregate": "countDistinct"
+            }, {
+                "name": "ModifiedDate",
+                "datatype": "TIMESTAMP",
+                "nullable": false,
+                "label": "Modified Date",
+                "usage": "identifier",
+                "regularAggregate": "countDistinct",
+                "taxonomyFamily": "cDate"
+            }
+        ]
+    },
+    "label": "Module Name",
+    "identifier": "moduleId"
+}
+
+
+AGENCIAS
+    { NUMERO_BANCO decimal(3)
+        "name": "NUMERO_BANCO",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Número do Banco",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "NUMERO_AGENCIA",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Número da Agência",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "NOME_AGENCIA",
+        "datatype": "NVARCHAR(50)",
+        "nullable": false,
+        "label": "Nome da Agência",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "ENDERECO_LOGRADOURO",
+        "datatype": "NVARCHAR(80)",
+        "nullable": true,
+        "label": "Logradouro",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cRegion"
+    },
+    {  
+        "name": "ENDERECO_CIDADE",
+        "datatype": "NVARCHAR(40)",
+        "nullable": true,
+        "label": "Cidade",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cCity"
+    },
+    {  
+        "name": "ENDERECO_UF",
+        "datatype": "NVARCHAR(2)",
+        "nullable": true,
+        "label": "UF",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cStateProvince"
+    },
+    {  
+        "name": "ENDERECO_PAIS",
+        "datatype": "NVARCHAR(40)",
+        "nullable": true,
+        "label": "País",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cCountry"
+    },
+    {  
+        "name": "ENDERECO_CEP",
+        "datatype": "NVARCHAR(8)",
+        "nullable": true,
+        "label": "CEP",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cPostalCode"
+    },
+    {   
+        "name": "TELEFONE_AGENCIA",
+        "datatype": "NVARCHAR(20)",
+        "nullable": true,
+        "label": "Telefone",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "DATA_ABERTURA_AGENCIA",
+        "datatype": "TIMESTAMP",
+        "nullable": true,
+        "label": "Data de Abertura",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cDate"
+    },
+    {   
+        "name": "DATA_FECHAMENTO_AGENCIA",
+        "datatype": "TIMESTAMP",
+        "nullable": true,
+        "label": "Data Fechamento",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cDate"
+    },
+)
+
+
+CONTAS
+    {   
+        "name": "NUMERO_BANCO",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Data Fechamento",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cDate"
+    },
+    {   
+        "name": "NUMERO_AGENCIA",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Número da Agência",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "NUMERO_CONTA",
+        "datatype": "NVARCHAR(20)",
+        "nullable": true,
+        "label": "Número da Conta",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "TIPO_CONTA",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Tipo da Conta",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "DATA_ABERTURA_CONTA",
+        "datatype": "TIMESTAMP",
+        "nullable": true,
+        "label": "Data Abertura Conta",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cDate"
+    },
+    {  
+        "name": "DATA_ENCERRAMENTO_CONTA",
+        "datatype": "TIMESTAMP",
+        "nullable": true,
+        "label": "Data Encerramento Conta",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cDate"
+    },
+    {  
+        "name": "MOVIMENTACAO_CONTA",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Movimentação Conta",
+        "usage": "identifier",
+        "regularAggregate": "sum",
+        "taxonomyFamily": "cNone"
+    },
+
+TIPO_CONTA
+    {   
+        "name": "ID",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "ID",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "NOME",
+        "datatype": "NVARCHAR(30)",
+        "nullable": true,
+        "label": "Nome",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    }
+
+TIPO_MOVIMENTACAO
+    {   
+        "name": "DESCRICAO",
+        "datatype": "NVARCHAR(255)",
+        "nullable": true,
+        "label": "Descrição",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "ID",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "ID",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    }
+
+TITULARES
+    {   
+        "name": "NUMERO_BANCO",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Número do Banco",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "NUMERO_AGENCIA",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Número Agencia",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "NUMERO_CONTA",
+        "datatype": "NVARCHAR(20)",
+        "nullable": true,
+        "label": "Número Conta",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "TIPO_CONTA",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Tipo Conta",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "TIPO_TITULAR",
+        "datatype": "NVARCHAR(1)",
+        "nullable": true,
+        "label": "Tipo Titular",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "PESSOA_INVESTIGADA",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Pessoa Investigada",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "TIPO_PESSOA_TITULAR",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Tipo Pessoa Titula",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "CPF_CNPJ_TITULAR",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "CPF/CNPJ Titular",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "NOME_TITULAR",
+        "datatype": "NVARCHAR(80)",
+        "nullable": true,
+        "label": "Nome Titular",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "NOME_DOC_IDENTIFICACAO",
+        "datatype": "NVARCHAR(50)",
+        "nullable": true,
+        "label": "Nome Doc. Identificação",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "NUMER_DOC_IDENTIFICACAO",
+        "datatype": "NVARCHAR(20)",
+        "nullable": true,
+        "label": "Numero Doc. Identificação",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "EDNDERECO_LOGRADOURO",
+        "datatype": "NVARCHAR(80)",
+        "nullable": true,
+        "label": "Endereço Logradouro",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "ENDERECO_CIDADE",
+        "datatype": "NVARCHAR(40)",
+        "nullable": true,
+        "label": "Endereço/Cidade",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cCity"
+    },
+    {  
+        "name": "ENDERECO_UF",
+        "datatype": "NVARCHAR(2)",
+        "nullable": true,
+        "label": "UF",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cState"
+    },
+    {  
+        "name": "ENDERECO_PAIS",
+        "datatype": "NVARCHAR(40)",
+        "nullable": true,
+        "label": "País",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cContry"
+    },
+    {
+        "name": "ENDERECO_CEP",
+        "datatype": "NVARCHAR(8)",
+        "nullable": true,
+        "label": "CEP",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cPostalCode"
+    },
+    {
+        "name": "TELEFONE_PESSOA",
+        "datatype": "NVARCHAR(20)",
+        "nullable": true,
+        "label": "Telefone Pessoa",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    { 
+        "name": "VALOR_RENDA",
+        "datatype": "FLOAT",
+        "nullable": true,
+        "label": "Renda",
+        "usage": "identifier",
+        "regularAggregate": "sum",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "DATA_ATUALIZACAO_RENDA",
+        "datatype": "TIMESTAMP",
+        "nullable": true,
+        "label": "Data Atualização Renda",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cDate"
+    },
+    {   
+        "name": "DATA_INICIO_RELACIONAMENTO",
+        "datatype": "TIMESTAMP",
+        "nullable": true,
+        "label": "Data Inicio Relacionamento",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cDate"
+    },
+    {   
+        "name": "DATA_FIM_RELACIONAMENTO",
+        "datatype": "TIMESTAMP",
+        "nullable": true,
+        "label": "Data Fim Relacionamento",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cDate"
+    },
+
+
+TIPO_TITULAR
+    { 
+        "name": "CODIG",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Codig",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    { 
+        "name": "DESCRICAO",
+        "datatype": "NVARCHAR(255)",
+        "nullable": true,
+        "label": "Descricao",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+
+EXTRATO
+    { 
+        "name": "CODIGO_CHAVE_EXTRATO",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Codigo Chave Extrato",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "NUMERO_BANCO",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Número Banco",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {
+        "name": "NUMERO_AGENCIA",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Número Agencia",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+         "name": "NUMERO_CONTA",
+        "datatype": "NVARCHAR(20)",
+        "nullable": true,
+        "label": "Número Conta",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {
+        "name": "TIPO_CONTA",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Tipo Conta",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "DATA_LANCAMENTO",
+        "datatype": "TIMESTAMP",
+        "nullable": true,
+        "label": "Data Lançamento",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cDate"
+    },
+    {  
+        "name": "NUMERO_DOCUMENTO",
+        "datatype": "NVARCHAR(20)",
+        "nullable": true,
+        "label": "Número Documento",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "DESCRICAO_LANCAMENTO",
+        "datatype": "NVARCHAR(255)",
+        "nullable": true,
+        "label": "Descrição Lançamento",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+        "name": "TIPO_LANCAMENTO",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Tipo Lançamento",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "VALOR_LANCAMENTO",
+        "datatype": "FLOAT",
+        "nullable": true,
+        "label": "Valor Lançamento",
+        "usage": "identifier",
+        "regularAggregate": "sum",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+         "name": "NATUREZA_LANCAMENTO",
+        "datatype": "NVARCHAR(1)",
+        "nullable": true,
+        "label": "Natureza Lançamento",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+         "name": "VALOR_SALDO",
+        "datatype": "FLOAT",
+        "nullable": true,
+        "label": "Valor Saldo",
+        "usage": "identifier",
+        "regularAggregate": "sum",
+        "taxonomyFamily": "cNone"
+    },
+    {  
+         "name": "NATUREZA_SALDO",
+        "datatype": "NVARCHAR(1)",
+        "nullable": true,
+        "label": "Natureza Saldo",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    },
+    {   
+        "name": "LOCAL_TRANSACAO",
+        "datatype": "NVARCHAR(80)",
+        "nullable": true,
+        "label": "Local Transacao",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+    }
+	
+ 
+TIPO_LANCAMENTO
+    {   
+        "name": "CODIGO",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Código",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {    
+        "name": "DESCRICAO",
+        "datatype": "NVARCHAR(80)",
+        "nullable": true,
+        "label": "Descrição",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    }
+	
+ORIGEM_DESTINO},
+    { 
+        "name": "CODIGO_CHAVE_OD",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Código",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {   
+        "name": "CODIGO_CHAVE_EXTRATO",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "ódigo Chave Extrato",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    { 
+        "name": "VALOR_TRANSACAO",
+        "datatype": "FLOAT",
+        "nullable": true,
+        "label": "Valor Transação",
+        "usage": "identifier",
+        "regularAggregate": "sum",
+        "taxonomyFamily": "cNone"
+
+    },
+    {   
+        "name": "NUMERO_DOCUMENTO_TRANSACAO",
+        "datatype": "NVARCHAR(20)",
+        "nullable": true,
+        "label": "Numero Documento Transação",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {   
+        "name": "NUMERO_BANCO_OD",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Número Banco OD",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {   
+        "name": "NUMERO_AGENCIA_OD",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Númer Agencia OD",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {  
+        "name": "NUMERO_CONTA_OD",
+        "datatype": "NVARCHAR(20)",
+        "nullable": true,
+        "label": "Número Conta OD",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {  
+        "name": "TIPO_CONTA_OD",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Tipo Conta OD",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {  
+        "name": "TIPO_PESSOA_OD",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Tipo Pessoa OD",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {   
+        "name": "CPF_CNPJ_OD",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "CPF/CNPJ OD",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    { 
+        "name": "NOME_PESSOA_OD",
+        "datatype": "NVARCHAR(80)",
+        "nullable": true,
+        "label": "Nome Pessoa OD",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    { 
+        "name": "NOME_DOC_IDENTIFICACAO_OD",
+        "datatype": "NVARCHAR(50)",
+        "nullable": true,
+        "label": "Nome DOC Identif. OD",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    { 
+        "name": "NUMERO_DOC_IDENTIFICACAO_OD",
+        "datatype": "NVARCHAR(20)",
+        "nullable": true,
+        "label": "Número DOC Identf OD",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {
+        "name": "CODIGO_DE_BARRAS",
+        "datatype": "NVARCHAR(100)",
+        "nullable": true,
+        "label": "Codigo de Barras",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {
+        "name": "NOME_ENDOSSANTE_CHEQUE",
+        "datatype": "NVARCHAR(80)",
+        "nullable": true,
+        "label": "Nome Endossante Cheque",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    { 
+        "name": "DOC_ENDOSSANTE_CHEQUE",
+        "datatype": "NVARCHAR(50)",
+        "nullable": true,
+        "label": "DOC Endossante Cheque",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {   
+        "name": "SITUACAO_IDENTIFICACAO",
+        "datatype": "INTEGER",
+        "nullable": true,
+        "label": "Situação Identificação",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
+    {   
+        "name": "OBSERVACAO",
+        "datatype": "NVARCHAR(250)",
+        "nullable": true,
+        "label": "Observação",
+        "usage": "identifier",
+        "regularAggregate": "countDistinct",
+        "taxonomyFamily": "cNone"
+
+    },
